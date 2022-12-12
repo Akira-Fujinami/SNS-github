@@ -1,10 +1,10 @@
 @extends('layouts.logout')
 
 @section('content')
-
-{!! Form::open() !!}
+{!! Form::open(['url' => '/login']) !!}
 
 <p>AtlasSNSへようこそ</p>
+<!-- コミット・プッシュテスト    -->
 
 {{ Form::label('e-mail') }}
 {{ Form::text('mail',null,['class' => 'input']) }}
@@ -12,7 +12,6 @@
 {{ Form::password('password',['class' => 'input']) }}
 
 {{ Form::submit('ログイン') }}
-
 <p><a href="/register">新規ユーザーの方はこちら</a></p>
 
 {!! Form::close() !!}
